@@ -1,0 +1,17 @@
+@import './_utils';
+
+.aboutme__title {
+  color: $primary;
+}
+.aboutme__button {
+  text-transform: uppercase;
+  background-color: $secondary;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+}
+.aboutme__button:hover {
+  background-color: black;
+  cursor: pointer;
+}

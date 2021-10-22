@@ -1,0 +1,11 @@
+$primary: rgb(255, 0, 55);
+$secondary: rgb(0, 119, 216);
+
+@mixin shadows {
+  box-shadow: 1px -5px 10px 1px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 1px -5px 10px 1px rgba(0,0,0,0.25);
+  -moz-box-shadow: 1px -5px 10px 1px rgba(0,0,0,0.25);
+}
+@mixin gradient {
+  background: linear-gradient(0deg, rgb(194, 248, 255) 0%, rgb(255, 194, 255) 100%);
+}

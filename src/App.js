@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import NavBar from './components/NavBar';
 import AboutMe from './components/AboutMe';
 import Abilities from './components/Abilities';
+import ContactUs from './components/ContactUs';
 
 function App() {
   return (
@@ -20,6 +21,11 @@ function App() {
         <div className='row py-5 justify-content-center'>
           <AboutMe />
           <Abilities />
+        </div>
+      </div>
+      <div className='container'>
+        <div className='row py-5'>
+          <ContactUs />
         </div>
       </div>
     </div>

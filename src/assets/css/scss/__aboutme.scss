@@ -1,15 +1,12 @@
 @import './_utils';
 
-.aboutme__title {
-  color: $primary;
-}
 .aboutme__button {
   text-transform: uppercase;
   background-color: $secondary;
   color: white;
   border: none;
-  border-radius: 8px;
-  padding: 0.75rem 2rem;
+  padding: 1rem 2rem;
+  @include rounded;
 }
 .aboutme__button:hover {
   background-color: black;

@@ -1,9 +1,6 @@
 @import './_utils';
 
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 75vh;
   background: {
     size: cover;
@@ -12,49 +9,29 @@
     attachment: fixed;
     position: center;
   }
-  text-align: center;
 
   .hero__fbox {
     background-color: white;
-    border-radius: 1rem;
-    padding: 3rem 0;
     width: 90%;
     margin: auto;
-    transform: translateY(5rem);
+    transform: translateY(2rem);
     position: relative;
     @include shadows;
+    @include rounded;
     
     .hero__name {
       position: absolute;
       top: 0;
       right: 0;
       left: 0;
-      margin: 2rem auto;
-      text-transform: uppercase;
-      font-weight: lighter;
-    }
-    .hero__title {
-      color: $primary;
-      width: 100%;
-    }
-  }
-  @media (min-width:568px) {
-    .hero__fbox {
-      padding: 3rem 4rem;
     }
   }
   .hero__sbox {
     @include gradient;
-    width: 95%;
-    border-radius: 1rem;
+    @include rounded;
+    width: 90%;
+    max-width: 500px;
   }
-  @media (min-width:992px) {
-    .hero__sbox {
-      padding: 0 3rem;
-      width: 60%;
-    }
-  }
-  
 }
 @media (min-width:768px) {
   .hero {

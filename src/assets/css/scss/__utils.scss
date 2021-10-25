@@ -9,3 +9,6 @@ $secondary: rgb(0, 119, 216);
 @mixin gradient {
   background: linear-gradient(0deg, rgb(194, 248, 255) 0%, rgb(255, 194, 255) 100%);
 }
+@mixin rounded {
+  border-radius: 1rem;
+}

@@ -6,6 +6,11 @@ html {
 }
 
 a { text-decoration: none;}
+input, textarea {
+  border: none;
+
+}
+
 
 // Font Sizes
 h1 {
@@ -83,6 +88,9 @@ p {
 .fw-bold {
   font-weight: bold;
 }
+.icons {
+  font-size: 2rem;
+}
 
 //colors
 .color-primary {
@@ -91,11 +99,24 @@ p {
 .color-secondary {
   color: $secondary;
 }
+.color-tertiary {
+  color: $tertiary;
+}
 .bg-primary {
   background-color: $primary;
 }
 .bg-secondary {
   background-color: $secondary;
+}
+.bg-tertiary {
+  background-color: $tertiary;
+}
+
+//width
+@for $var from 1 to 6 {
+  .w-#{$var * 20} {
+    width: $var * 20%;
+  }
 }
 
 //cards

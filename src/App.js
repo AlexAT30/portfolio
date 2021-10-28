@@ -1,16 +1,24 @@
 import './assets/css/normalize.css'
 import './assets/css/bootstrap-grid.css'
 import './assets/css/styles.css'
+import { useState } from "react";
 import Hero from './components/Hero';
 import NavBar from './components/NavBar';
 import AboutMe from './components/AboutMe';
 import Abilities from './components/Abilities';
-import ContactUs from './components/ContactUs';
+import Contact from './components/Contact';
+import ContactData from './components/ContactData';
+import SideMenu from './components/SideMenu';
+
 
 function App() {
+
+  const [sideMenu, setSideMenu] = useState(true);
+
   return (
     <>
-    <NavBar />
+    <SideMenu sideMenu={sideMenu} setSideMenu={setSideMenu} />
+    <NavBar sideMenu={sideMenu} setSideMenu={setSideMenu} />
     <div className='container-fluid'>
       <div className='row'>
         <Hero />
@@ -23,10 +31,11 @@ function App() {
           <Abilities />
         </div>
       </div>
-      <div className='container'>
-        <div className='row py-5'>
-          <ContactUs />
-        </div>
+    </div>
+    <div className='container'>
+      <div className='row py-5 justify-content-around'>
+        <ContactData />
+        <Contact />
       </div>
     </div>
     <div>Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>

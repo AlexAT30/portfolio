@@ -1,0 +1,27 @@
+@import './_utils';
+.aboutme__button {
+  text-transform: uppercase;
+  background-color: $secondary;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.aboutme__button:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+.contact__button {
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: $primary;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+}
+.contact__button:hover {
+  background-color: $secondary;
+  cursor: pointer;
+}

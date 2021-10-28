@@ -1,10 +1,4 @@
-const NavBar = ({sideMenu, setSideMenu}) => {
-  const handleClose = () => {
-    if(sideMenu) {
-      return setSideMenu(false);
-    }
-    setSideMenu(true);
-  }
+const NavBar = ({handleClose}) => {
   return(
     <nav className='nav container-fluid d-flex justify-content-between align-items-center p-3'>
       <a className='nav__brand text-accent color-primary' href='#home'>Alex Aguiñaga</a>

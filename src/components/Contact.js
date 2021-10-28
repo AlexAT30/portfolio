@@ -1,6 +1,6 @@
 const Contact = () => {
   return(
-    <form className='card px-5 col-12 col-lg-5 pb-5'>
+    <form className='card px-5 col-10 col-lg-5 pb-5'>
       <h2 className='text-accent color-primary'>Dejame un mensaje ;D</h2>
       <label className='w-100'>
         <input className='bg-tertiary w-100 p-2 mb-3' type='text' placeholder='Escribe tu nombre aquí...' />

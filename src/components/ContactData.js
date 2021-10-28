@@ -1,6 +1,6 @@
 const ContactData = () => {
   return(
-    <div className='card px-5 col-12 col-lg-6 mb-5 mb-lg-0 pb-5 align-items-start'>
+    <div className='card px-5 col-10 col-lg-6 mb-5 mb-lg-0 pb-5 align-items-start'>
       <p className='fw-light text-upper mb-0'>¿Te interesó mi perfil?</p>
       <h2 className='text-accent color-primary m-0'>Contáctame</h2>
       <div className='d-flex flex-column align-items-start'>

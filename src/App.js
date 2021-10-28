@@ -13,12 +13,19 @@ import SideMenu from './components/SideMenu';
 
 function App() {
 
+  //Sidemenu
   const [sideMenu, setSideMenu] = useState(true);
+  const handleClose = () => {
+    if(sideMenu) {
+      return setSideMenu(false);
+    }
+    setSideMenu(true);
+  }
 
   return (
     <>
-    <SideMenu sideMenu={sideMenu} setSideMenu={setSideMenu} />
-    <NavBar sideMenu={sideMenu} setSideMenu={setSideMenu} />
+    <SideMenu sideMenu={sideMenu} handleClose={handleClose} />
+    <NavBar handleClose={handleClose} />
     <div className='container-fluid'>
       <div className='row'>
         <Hero />

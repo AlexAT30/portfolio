@@ -444,6 +444,31 @@ p {
   border-radius: 1rem;
 }
 
+.contact__container {
+  position: relative;
+}
+
+.contact__bg {
+  position: absolute;
+  -webkit-transform: translateY(-2rem);
+          transform: translateY(-2rem);
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 90%;
+  height: 70%;
+  z-index: -1000;
+  margin: auto;
+  background: -webkit-gradient(linear, left bottom, left top, from(#c2f8ff), to(#ffc2ff));
+  background: linear-gradient(0deg, #c2f8ff 0%, #ffc2ff 100%);
+  border-radius: 1rem;
+}
+
+@media (min-width: 998px) {
+  .contact__bg {
+    width: 110%;
+  }
+}
+
 .aboutme__button {
   text-transform: uppercase;
   background-color: #0077d8;

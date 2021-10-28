@@ -4,3 +4,23 @@
   @include shadows;
   @include rounded;
 }
+.contact__container {
+  position: relative;
+}
+.contact__bg {
+  position: absolute;
+  transform: translateY(-2rem);
+  box-sizing: content-box;
+  width: 90%;
+  height: 70%;
+  z-index: -1000;
+  margin: auto;
+
+  @include gradient;
+  @include rounded
+}
+@media (min-width:998px) {
+  .contact__bg {
+    width: 110%;
+  }
+}

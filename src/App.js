@@ -14,7 +14,7 @@ import SideMenu from './components/SideMenu';
 function App() {
 
   //Sidemenu
-  const [sideMenu, setSideMenu] = useState(true);
+  const [sideMenu, setSideMenu] = useState(false);
   const handleClose = () => {
     if(sideMenu) {
       return setSideMenu(false);
@@ -26,26 +26,27 @@ function App() {
     <>
     <SideMenu sideMenu={sideMenu} handleClose={handleClose} />
     <NavBar handleClose={handleClose} />
-    <div className='container-fluid'>
-      <div className='row'>
+    <section className='container-fluid'>
+      <div className='row' id='home'>
         <Hero />
       </div>
-    </div>
-    <div className='gradient container-fluid'>
+    </section>
+    <section className='gradient container-fluid'>
       <div className='container'>
-        <div className='row py-5 justify-content-center'>
+        <div className='row py-5 justify-content-center' id='about-me'>
           <AboutMe />
           <Abilities />
         </div>
       </div>
-    </div>
-    <div className='container'>
-      <div className='row py-5 justify-content-around'>
+    </section>
+    <section className='container contact__container'>
+      <div className='row py-5 justify-content-around' id='contact'>
+        <div className='contact__bg'></div>
         <ContactData />
         <Contact />
       </div>
-    </div>
-    <div>Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </section>
+    {/* <div>Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */}
     </>
   );
 }

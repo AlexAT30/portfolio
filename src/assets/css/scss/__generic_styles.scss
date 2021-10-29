@@ -3,6 +3,7 @@
 html {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 a { text-decoration: none;}
@@ -71,6 +72,9 @@ p {
 .gradient {
   @include gradient;
 }
+.rounded {
+  @include rounded;
+}
 
 //Text-styles
 .text-accent {
@@ -137,4 +141,10 @@ p {
   .card__image {
     width: 70px;
   }
+}
+
+//borrar o cambiar
+.appear {
+  opacity: 0;
+  transition: all 0.5s;
 }

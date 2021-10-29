@@ -1,6 +1,7 @@
 html {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -75,6 +76,10 @@ p {
 .gradient {
   background: -webkit-gradient(linear, left bottom, left top, from(#c2f8ff), to(#ffc2ff));
   background: linear-gradient(0deg, #c2f8ff 0%, #ffc2ff 100%);
+}
+
+.rounded {
+  border-radius: 1rem;
 }
 
 .text-accent {
@@ -176,6 +181,12 @@ p {
   width: 70px;
 }
 
+.appear {
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .sidemenu {
   background-color: black;
   color: white;
@@ -191,6 +202,8 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 @media (min-width: 768px) {

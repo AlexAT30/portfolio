@@ -9,10 +9,11 @@ import Abilities from './components/Abilities';
 import Contact from './components/Contact';
 import ContactData from './components/ContactData';
 import SideMenu from './components/SideMenu';
+import Portfolio from './components/Portfolio';
+import { useEffect } from 'react';
 
 
 function App() {
-
   //Sidemenu
   const [sideMenu, setSideMenu] = useState(false);
   const handleClose = () => {
@@ -21,6 +22,23 @@ function App() {
     }
     setSideMenu(true);
   }
+  //appear animations
+  useEffect(
+    ()=> {
+      const appearItems = document.querySelectorAll('.appear');
+      const handleScroll = () => {
+        for(let i = 0; i < appearItems.length; i++) {
+          if(appearItems[i].getBoundingClientRect().top < 500){
+            appearItems[i].style.opacity = 1;
+          }
+        }
+      }
+      document.addEventListener('scroll', handleScroll);
+      return(()=> {
+        document.removeEventListener('scroll', handleScroll);
+      });
+    }, []
+  );
 
   return (
     <>
@@ -37,6 +55,14 @@ function App() {
           <AboutMe />
           <Abilities />
         </div>
+      </div>
+    </section>
+    <section className='container' id='portfolio'>
+      <div className='row py-5'>
+        <h2 className='text-center text-accent color-primary'>Mira mis proyectos</h2>
+        <Portfolio />
+        <Portfolio />
+        <Portfolio />
       </div>
     </section>
     <section className='container contact__container'>

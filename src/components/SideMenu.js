@@ -7,6 +7,7 @@ const SideMenu = ({sideMenu, handleClose}) => {
         <ul className='sidemenu__menu'>
           <li><a href='#home' onClick={handleClose}>Inicio</a></li>
           <li><a href='#about-me' onClick={handleClose}>Sobre mí</a></li>
+          <li><a href='#portfolio' onClick={handleClose}>Portafolio</a></li>
           <li><a href='#contact' onClick={handleClose}>Contacto</a></li>
         </ul>
       </div>

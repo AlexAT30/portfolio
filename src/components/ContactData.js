@@ -1,8 +1,13 @@
+import { useContext } from "react";
+import Context from "../context/Context";
+
 const ContactData = () => {
+  const {language} = useContext(Context);
+
   return(
-    <div className='card px-5 col-10 col-lg-6 mb-5 mb-lg-0 pb-5 align-items-start'>
-      <p className='fw-light text-upper mb-3 mb-sm-0'>¿Te interesó mi perfil?</p>
-      <h2 className='text-accent color-primary m-0'>Contáctame</h2>
+    <div className='card px-5 col-10 col-lg-6 mb-5 mb-lg-0 pb-5 align-items-start appear'>
+      <p className='fw-light text-upper mb-3 mb-sm-0'>{language === 'english'? 'Were you interested in my profile?': '¿Te interesó mi perfil?'}</p>
+      <h2 className='text-accent color-primary m-0'>{language === 'english'? 'Contact me': 'Contáctame'}</h2>
       <div className='d-flex flex-column my-data'>
         <p className=''><i className="fas fa-user-circle color-primary"></i>: Mario Alejandro Aguiñaga Torres</p>
         <p className=''><i className="fas fa-mobile-alt color-primary"></i>: +52 01 33 1974 4097</p>

@@ -148,3 +148,15 @@ p {
   opacity: 0;
   transition: all 0.5s;
 }
+.appear-bottom {
+  animation: appear-bottom-animation 0.5s;
+}
+@keyframes appear-bottom-animation {
+  0% {
+    transform: translateY(5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+

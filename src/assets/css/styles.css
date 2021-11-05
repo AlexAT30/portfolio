@@ -187,6 +187,33 @@ p {
   transition: all 0.5s;
 }
 
+.appear-bottom {
+  -webkit-animation: appear-bottom-animation 0.5s;
+          animation: appear-bottom-animation 0.5s;
+}
+
+@-webkit-keyframes appear-bottom-animation {
+  0% {
+    -webkit-transform: translateY(5rem);
+            transform: translateY(5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes appear-bottom-animation {
+  0% {
+    -webkit-transform: translateY(5rem);
+            transform: translateY(5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .sidemenu {
   background-color: black;
   color: white;
@@ -282,6 +309,8 @@ p {
   position: fixed;
   z-index: 2000;
   margin: 0;
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
 }
 
 .sidemenu__bg-true {
@@ -366,15 +395,21 @@ p {
   background: none;
   color: white;
   border: none;
-  cursor: pointer;
   margin-right: 2rem;
   margin-top: 1rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
-.sidemenu__close:hover {
+.sidemenu__button {
+  color: white;
+  background: none;
+  border: none;
+}
+
+.sidemenu__close:hover, .sidemenu__button:hover {
   color: #e4007a;
+  cursor: pointer;
 }
 
 .hero {
@@ -387,8 +422,8 @@ p {
 }
 
 .hero .hero__fbox {
-  background-color: white;
   width: 90%;
+  background-color: white;
   margin: auto;
   -webkit-transform: translateY(2rem);
           transform: translateY(2rem);
@@ -422,8 +457,8 @@ p {
 
 .nav {
   position: fixed;
-  background-color: white;
   z-index: 1000;
+  background-color: white;
 }
 
 .nav .nav__brand {

@@ -1,17 +1,30 @@
+import { useContext } from 'react';
+import {useForm} from 'react-hook-form';
+import Context from '../context/Context';
+import { sendForm } from '../services/sendForm';
+
 const Contact = () => {
+  const {register, handleSubmit, reset} = useForm();
+  const {language} = useContext(Context);
+
+  const onSubmit = async (data) => {
+    await sendForm(data);
+    reset();
+  }
+
   return(
-    <form className='card px-5 col-10 col-lg-5 pb-5'>
-      <h2 className='text-accent color-primary'>Dejame un mensaje ;D</h2>
+    <form className='card px-5 col-10 col-lg-5 pb-5 appear' onSubmit={handleSubmit(onSubmit)}>
+      <h2 className='text-accent color-primary'>{language === 'english'? 'Leave me a message ;D': 'Dejame un mensaje ;D'}</h2>
       <label className='w-100'>
-        <input className='bg-tertiary w-100 p-2 mb-3' type='text' placeholder='Escribe tu nombre aquí...' />
+        <input className='bg-tertiary w-100 p-2 mb-3' type='text' placeholder={language === 'english'? 'Name': 'Nombre'} {...register('name', {required: true})} />
       </label>
       <label className='w-100'>
-        <input className='bg-tertiary w-100 p-2 mb-3' type='email' placeholder='Escribe tu correo aquí...' />
+        <input className='bg-tertiary w-100 p-2 mb-3' type='email' placeholder={language === 'english'? 'Email': 'Correo'} {...register('email', {required: true})} />
       </label>
       <label className='w-100'>
-        <textarea className='bg-tertiary w-100 p-2 mb-3' rows='4' placeholder='Escribe tu mensaje aquí...' />
+        <textarea className='bg-tertiary w-100 p-2 mb-3' rows='4' placeholder={language === 'english'? 'Message': 'Mensaje'} {...register('message', {required: true})} />
       </label>
-      <button className='w-100 contact__button text-accent' type='submit'>Envíar</button>
+      <button className='w-100 contact__button text-accent' type='submit'>{language === 'english'? 'Send': 'Enviar'}</button>
     </form>
   );
 } 

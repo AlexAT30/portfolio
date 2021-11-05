@@ -53,7 +53,7 @@
   position: fixed;
   z-index: 2000;
   margin: 0;
-
+  transform: translate(-100%);
 }
 .sidemenu__bg-true {
   background-color: rgba(0, 0, 0, 0.5);
@@ -104,13 +104,18 @@
   background: none;
   color: white;
   border: none;
-  cursor: pointer;
   margin-right: 2rem;
   margin-top: 1rem;
   align-self: flex-end;
 }
-.sidemenu__close:hover {
+.sidemenu__button {
+  color: white;
+  background: none;
+  border: none;
+}
+.sidemenu__close:hover, .sidemenu__button:hover {
   color: $primary;
+  cursor: pointer;
 }
 
 

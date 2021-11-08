@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import {Link} from 'react-scroll';
 import Context from "../context/Context";
 
 const SideMenu = ({sideMenu, handleClose}) => {
@@ -9,10 +10,10 @@ const SideMenu = ({sideMenu, handleClose}) => {
       <div className={`sidemenu sidemenu-${sideMenu}`}>
         <button className='sidemenu__close' onClick={handleClose}><i className="fas fa-times"></i></button>
         <ul className='sidemenu__menu'>
-          <li><a href='#home' onClick={handleClose}>{language === 'english'? 'Home': 'Inicio'}</a></li>
-          <li><a href='#about-me' onClick={handleClose}>{language === 'english'? 'About me': 'Sobre mí'}</a></li>
-          <li><a href='#portfolio' onClick={handleClose}>{language === 'english'? 'Portfolio': 'Portafolio'}</a></li>
-          <li><a href='#contact' onClick={handleClose}>{language === 'english'? 'Contact': 'Contacto'}</a></li>
+          <li><Link to='home' smooth={true} onClick={handleClose}>{language === 'english'? 'Home': 'Inicio'}</Link></li>
+          <li><Link to='about-me' smooth={true} onClick={handleClose}>{language === 'english'? 'About me': 'Sobre mí'}</Link></li>
+          <li><Link to='portfolio' smooth={true} onClick={handleClose}>{language === 'english'? 'Portfolio': 'Portafolio'}</Link></li>
+          <li><Link to='contact' smooth={true} onClick={handleClose}>{language === 'english'? 'Contact': 'Contacto'}</Link></li>
           <li>
             <button className='sidemenu__button' onClick={()=> {
               if(language === 'english'){

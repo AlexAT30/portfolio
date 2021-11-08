@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import {useForm} from 'react-hook-form';
 import Context from '../context/Context';
 import { sendForm } from '../services/sendForm';
@@ -6,10 +6,15 @@ import { sendForm } from '../services/sendForm';
 const Contact = () => {
   const {register, handleSubmit, reset} = useForm();
   const {language} = useContext(Context);
+  const [send, setSend] = useState(false);
 
   const onSubmit = async (data) => {
     await sendForm(data);
     reset();
+    setSend(true);
+    setTimeout(() => {
+      setSend(false);
+    }, 2000);
   }
 
   return(
@@ -24,7 +29,12 @@ const Contact = () => {
       <label className='w-100'>
         <textarea className='bg-tertiary w-100 p-2 mb-3' rows='4' placeholder={language === 'english'? 'Message': 'Mensaje'} {...register('message', {required: true})} />
       </label>
-      <button className='w-100 contact__button text-accent' type='submit'>{language === 'english'? 'Send': 'Enviar'}</button>
+      <button className='w-100 contact__button text-accent' type='submit'>{
+        language === 'english'?
+        send === false? 'Send' : 'Message sent'
+        : 
+        send === false? 'Enviar' : 'Mensaje enviado'
+      }</button>
     </form>
   );
 } 

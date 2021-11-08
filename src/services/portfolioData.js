@@ -1,5 +1,5 @@
 // Esta es una base de datos de prueba en lo que termino el backend para poder administrar desde la misma pagina
-export default [
+const portfolioData = [
     {
         id: 1,
         name: 'Pokedéx',
@@ -50,3 +50,5 @@ export default [
         technologies: ['react', 'css']
     },
 ]
+
+export default portfolioData;

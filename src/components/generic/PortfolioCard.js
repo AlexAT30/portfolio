@@ -2,19 +2,21 @@ const PortfolioCard = ({project}) => {
   const technologiesIcons = project.technologies.map((technologie) => {
     switch (technologie) {
       case 'html':
-        return <i className="fab fa-html5 me-3"></i>
+        return <i key={`${technologie}_${project.id}`} className="fab fa-html5 me-3"></i>;
       case 'css':
-        return <i className="fab fa-css3-alt me-3"></i>
+        return <i key={`${technologie}_${project.id}`} className="fab fa-css3-alt me-3"></i>;
       case 'js':
-        <i className="fab fa-js-square me-3"></i>
+        return <i key={`${technologie}_${project.id}`} className="fab fa-js-square me-3"></i>;
       case 'sass':
-        return <i className="fab fa-sass me-3"></i>
+        return <i key={`${technologie}_${project.id}`} className="fab fa-sass me-3"></i>;
       case 'bootstrap':
-        return <i className="fab fa-bootstrap me-3"></i>
+        return <i key={`${technologie}_${project.id}`} className="fab fa-bootstrap me-3"></i>;
       case 'react':
-        return <i className="fab fa-react me-3"></i>
+        return <i key={`${technologie}_${project.id}`} className="fab fa-react me-3"></i>;
       case 'node':
-        return <i className="fab fa-node me-3"></i>
+        return <i key={`${technologie}_${project.id}`} className="fab fa-node me-3"></i>;
+      default:
+        return 'X';
     }
   })
 

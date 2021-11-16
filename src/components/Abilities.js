@@ -22,7 +22,7 @@ const Abilities = () => {
         <Card title='Backend'
           text={
             language === 'english'?
-            'In the backend I use Node JS with express, with Swagger to documentation, Jest to unit and integration tests, and Sequialize to work with datebases'
+            'In the backend I use Node JS with express, with Swagger to documentation, Jest to unit and integration tests, and Sequealize to work with datebases.'
             :
             'En backend manejo Node JS junto a express, con Swagger para documentación, Jest para pruebas unitarias y de integración, y Sequealize para trabajar bases de datos.'
           }

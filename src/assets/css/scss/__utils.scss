@@ -11,5 +11,5 @@ $tertiary: rgb(248, 201, 211);
   background: linear-gradient(0deg, rgb(194, 248, 255) 0%, rgb(255, 194, 255) 100%);
 }
 @mixin rounded {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }

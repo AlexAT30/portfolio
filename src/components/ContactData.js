@@ -6,7 +6,7 @@ const ContactData = () => {
 
   return(
     <div className='card px-5 col-10 col-lg-6 mb-5 mb-lg-0 pb-5 align-items-start appear'>
-      <p className='fw-light text-upper mb-3 mb-sm-0'>{language === 'english'? 'Were you interested in my profile?': '¿Te interesó mi perfil?'}</p>
+      <p className='fw-light text-upper mb-3 mb-sm-0'>{language === 'english'? 'Are you interested in my profile?': '¿Te interesó mi perfil?'}</p>
       <h2 className='text-accent color-primary m-0'>{language === 'english'? 'Contact me': 'Contáctame'}</h2>
       <div className='d-flex flex-column my-data'>
         <p className=''><i className="fas fa-user-circle color-primary"></i>: Mario Alejandro Aguiñaga Torres</p>

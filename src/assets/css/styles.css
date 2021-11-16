@@ -80,7 +80,7 @@ p {
 }
 
 .rounded {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 .text-accent {
@@ -187,7 +187,7 @@ p {
           align-items: center;
   background-color: white;
   padding-top: 1.5rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   box-shadow: 1px -5px 10px 1px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 1px -5px 10px 1px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 1px -5px 10px 1px rgba(0, 0, 0, 0.25);
@@ -453,7 +453,7 @@ p {
   box-shadow: 1px -5px 10px 1px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 1px -5px 10px 1px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 1px -5px 10px 1px rgba(0, 0, 0, 0.25);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 .hero .hero__fbox .hero__name {
@@ -466,7 +466,7 @@ p {
 .hero .hero__sbox {
   background: -webkit-gradient(linear, left bottom, left top, from(#c2f8ff), to(#ffc2ff));
   background: linear-gradient(0deg, #c2f8ff 0%, #ffc2ff 100%);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   width: 90%;
   max-width: 500px;
 }
@@ -500,7 +500,7 @@ p {
   color: white;
   border: none;
   padding: 1rem 2rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 .aboutme__button:hover {
@@ -512,7 +512,7 @@ p {
   box-shadow: 1px -5px 10px 1px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 1px -5px 10px 1px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 1px -5px 10px 1px rgba(0, 0, 0, 0.25);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 .contact__container {
@@ -531,7 +531,7 @@ p {
   margin: auto;
   background: -webkit-gradient(linear, left bottom, left top, from(#c2f8ff), to(#ffc2ff));
   background: linear-gradient(0deg, #c2f8ff 0%, #ffc2ff 100%);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 @media (min-width: 998px) {
@@ -546,7 +546,7 @@ p {
   color: white;
   border: none;
   padding: 1rem 2rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 .aboutme__button:hover {

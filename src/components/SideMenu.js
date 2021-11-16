@@ -3,7 +3,7 @@ import {Link} from 'react-scroll';
 import Context from "../context/Context";
 
 const SideMenu = ({sideMenu, handleClose}) => {
-  const {language, changeLanguage} = useContext(Context);
+  const {language} = useContext(Context)
   return(
     <>
     <div className={`sidemenu__bg sidemenu__bg-${sideMenu}`} onClick={handleClose}></div>
@@ -14,17 +14,6 @@ const SideMenu = ({sideMenu, handleClose}) => {
           <li><Link to='about-me' smooth={true} onClick={handleClose}>{language === 'english'? 'About me': 'Sobre mí'}</Link></li>
           <li><Link to='portfolio' smooth={true} onClick={handleClose}>{language === 'english'? 'Portfolio': 'Portafolio'}</Link></li>
           <li><Link to='contact' smooth={true} onClick={handleClose}>{language === 'english'? 'Contact': 'Contacto'}</Link></li>
-          <li>
-            <button className='sidemenu__button' onClick={()=> {
-              if(language === 'english'){
-                return changeLanguage('spanish')
-              }
-              changeLanguage('english')
-              
-              }}>
-              <i className="fas fa-language"></i> {language === 'english'? 'English': 'Español'}
-            </button>
-          </li>
         </ul>
       </div>
     </>

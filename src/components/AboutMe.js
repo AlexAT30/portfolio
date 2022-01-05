@@ -12,7 +12,7 @@ const AboutMe = () => {
     <p className='mb-5'>
       {
         language === 'english'?
-        'My name is Mario Alejandro Aguiñaga Torres, i\'m a web developer and a math student in in the University of Guadalajara. Since I was kid, I\'ve had a great talent with the technology and facility with the mathematics; my target is to dedicate myself to data science and machine learning in a near future'
+        'My name is Alex Aguiñaga, I\'m a web developer and a math student at the University of Guadalajara. Since I was a kid, I\'ve had a great talent for technology and facility with mathematics; my target is to dedicate myself to data science and machine learning in a near future.'
         :
         'Mi nombre es Mario Alejandro Aguiñaga Torres, soy desarrollador web y estudiante de matemáticas en la Universidad de Guadalajara. Desde que era pequeño siempre he tenido un gran talento con la tecnología y facilidad con las matemáticas; mi meta es dedicarme a ciencia de datos y machine learning en un futuro no muy lejano.'
       }
